@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - AEE</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .photo-container {
+            position: relative;
+            height: 100vh; /* Full viewport height */
+            width: 100%;
+            background: url('aboutpic.jpg') no-repeat center center/cover; /* Photo background */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black for readability */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            color: #fff; /* White text for the links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #1e90ff; /* Light blue on hover */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 70px; /* Adjust height as needed */
+            margin-right: 10px; /* Space between logo and text */
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: #1e90ff; /* Light blue text */
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            justify-content: space-between;
+
+    padding-bottom: 60px; /* Space for footer */
+        }
+
+        .box {
+            padding: 5px;
+            border: 1px solid #ddd;
+            margin-left: 250px;
+            width: 800px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+            color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow-y: auto; /* Scrollable content */
+        }
+
+        .contact-info {
+            height: 45%; /* Adjust height of top box */
+        }
+
+        .chat-container {
+            height: 50%; /* Adjust height of bottom box */
+
+        }
+
+        .contact-info h2,
+        .chat-container h2 {
+            color: #1e90ff; /* Light blue color for headings */
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .social-links a i {
+            margin-right: 10px; /* Space between icon and text */
+        }
+
+        .social-links a span {
+            font-size: 16px; /* Adjust as needed */
+            color: #fff;
+        }
+
+        .social-links a:hover {
+            color: #1e90ff;
+        }
+
+        .social-links a:hover span {
+            color: #1e90ff;
+        }
+
+        #chatOutput {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+
+        #chatInput {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #sendMessage {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #sendMessage:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #1e90ff; /* Light blue footer */
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="photo-container">
+        <!-- Overlay Content -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <!-- Logo Image -->
+                    <img src="logo.png" alt="AEE Logo" class="logo-img">
+                    <!-- Alternative Text Logo -->
+                    <h1>AEE</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About us</a></li>
+                    <li><a href="newsletter.pdf" target="_blank"><i class="fas fa-newspaper"></i> Newsletter</a></li>
+                    <li><a href="ach.html"><i class="fas fa-award"></i> Achievements</a></li> 
+                    <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                    <li><a href="con.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            <!-- Contact Info Section -->
+            <div class="box contact-info">
+                <h2>Contact Information</h2>
+                <p>For inquiries, please reach out to us through the following contact details:</p>
+                
+<!-- Social Media Links -->
+                <div class="social-links">
+                    <h2><a href="https://www.instagram.com/yourprofile" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i> <span><h3>@aee.vit</h3></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i> <span><h3>/AEE VIT</h3></span>
+                    </a>
+                    <a href="https://www.facebook.com/yourprofile" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook-f"></i> <span><h3>/aeevitchapter</h3></span>
+                    </a></h2>
+                </div>
+            </div>
+
+            <!-- Chatbot Section -->
+            <div class="box chat-container">
+                <h2>Interactive Chatbot</h2>
+                <div id="chatContainer">
+                    <div id="chatOutput"></div>
+                    <input type="text" id="chatInput" placeholder="Ask about our AEE chapter...">
+                    <button id="sendMessage">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 AEE. All rights reserved.
+    </footer>
+
+    <script>
+        document.getElementById("sendMessage").addEventListener("click", function() {
+    const chatInput = document.getElementById("chatInput").value.toLowerCase();
+    
+    fetch('https://run.mocky.io/v3/772cca4d-df0b-42d3-88ee-156b6ea67d35', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ question: chatInput })
+    })
+    .then(response => response.json())
+    .then(data => {
+        const chatOutput = document.getElementById("chatOutput");
+        let reply = data.responses.default; // Default reply if no specific match is found
+
+        // Check for specific categories in the API response
+        if (data.responses) {
+            if (chatInput.includes('about aee')) {
+                reply = data.responses.about_aee.basic || reply;
+            } else if (chatInput.includes('events')) {
+                reply = data.responses.events.basic || reply;
+                if (chatInput.includes('upcoming')) {
+                    reply = data.responses.events.upcoming || reply;
+                } else if (chatInput.includes('past')) {
+                    reply = data.responses.events.past || reply;
+                }
+            } else if (chatInput.includes('membership')) {
+                reply = data.responses.membership.basic || reply;
+                if (chatInput.includes('benefits')) {
+                    reply = data.responses.membership.benefits || reply;
+                } else if (chatInput.includes('requirements')) {
+                    reply = data.responses.membership.requirements || reply;
+                }
+            } else if (chatInput.includes('achievements')) {
+                reply = data.responses.achievements.basic || reply;
+                if (chatInput.includes('recent')) {
+                    reply = data.responses.achievements.recent || reply;
+                }
+            } else if (chatInput.includes('contact')) {
+                reply = data.responses.contact.basic || reply;
+                if (chatInput.includes('email')) {
+                    reply = data.responses.contact.email || reply;
+                } else if (chatInput.includes('phone')) {
+                    reply = data.responses.contact.phone || reply;
+                }
+            } else if (chatInput.includes('projects')) {
+                reply = data.responses.projects.current || reply;
+                if (chatInput.includes('past')) {
+                    reply = data.responses.projects.past || reply;
+                }
+            } else if (chatInput.includes('volunteer')) {
+                reply = data.responses.volunteer.basic || reply;
+                if (chatInput.includes('opportunities')) {
+                    reply = data.responses.volunteer.opportunities || reply;
+                }
+            } else if (chatInput.includes('sponsorship')) {
+                reply = data.responses.sponsorship.basic || reply;
+            } else if (chatInput.includes('collaborations')) {
+                reply = data.responses.collaborations.basic || reply;
+            } else if (chatInput.includes('resources')) {
+                reply = data.responses.resources.basic || reply;
+                if (chatInput.includes('publications')) {
+                    reply = data.responses.resources.publications || reply;
+                }
+            } else if (chatInput.includes('education')) {
+                reply = data.responses.education.basic || reply;
+            } else if (chatInput.includes('careers')) {
+                reply = data.responses.careers.basic || reply;
+            } else if (chatInput.includes('feedback')) {
+                reply = data.responses.feedback.basic || reply;
+            } else if (chatInput.includes('technical support')) {
+                reply = data.responses.technical_support.basic || reply;
+            }
+        }
+
+        // Display the chat input and reply
+        chatOutput.innerHTML += `<p><strong>You:</strong> ${chatInput}</p>`;
+        chatOutput.innerHTML += `<p><strong>Bot:</strong> ${reply}</p>`;
+        document.getElementById("chatInput").value = '';
+        chatOutput.scrollTop = chatOutput.scrollHeight;
+    })
+    .catch(error => console.error('Error:', error));
+});
+
+    </script>
+</body>
+</html>

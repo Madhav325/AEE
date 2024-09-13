@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 70px; /* Adjust height as needed */
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #1e90ff;  /* Light blue text */
+}
+
+.video-container {
+    position: relative;
+    height: 94%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Video settings */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+/* Overlay content settings */
+header {
+    background: rgba(0, 0, 0, 0.5);  /* Semi-transparent black for readability */
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #fff;  /* White text for the links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #1e90ff;  /* Light blue on hover */
+}
+
+.logo h1 {
+    color: #1e90ff;  /* Light blue logo */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.hero-content h2 {
+    color: #1e90ff;  /* Light blue title */
+}
+
+.cta-button {
+    background-color: #1e90ff;  /* Light blue button */
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #104e8b;  /* Darker blue on hover */
+}
+
+.about {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: white;  /* White background for content sections */
+    color: #333;
+}
+
+footer {
+    background-color: #1e90ff;  /* Light blue footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
